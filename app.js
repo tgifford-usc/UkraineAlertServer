@@ -26,7 +26,7 @@ app.get("/status", (request, response) => {
 });
 
 
-app.get("/alert", async (request, response) => {
+app.get("/alerts", async (request, response) => {
     const url = `${apiBase}${alertsEndpoint}`;
     const apiResponse = await fetch(url, {
         headers: {
@@ -34,6 +34,6 @@ app.get("/alert", async (request, response) => {
           Authorization: request.query["token"]
         }
       });
-    const alert = await apiResponse.json();
-    response.send(alert);
+    const alerts = await apiResponse.json();
+    response.send(alerts);
 });
