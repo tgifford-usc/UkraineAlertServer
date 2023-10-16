@@ -1,0 +1,25 @@
+{
+  "name": "ukrainealertserver",
+  "version": "1.0.0",
+  "description": "Middleware exposing the Ukraine alerts without CORS restrictions",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgifford-usc/UkraineAlertServer.git"
+  },
+  "author": "tgifford-usc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgifford-usc/UkraineAlertServer/issues"
+  },
+  "homepage": "https://github.com/tgifford-usc/UkraineAlertServer#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
