@@ -27,13 +27,17 @@ app.get("/status", (request, response) => {
 
 
 app.get("/alerts", async (request, response) => {
-    const url = `${apiBase}${alertsEndpoint}`;
-    const apiResponse = await fetch(url, {
+    try {
+      const url = `${apiBase}${alertsEndpoint}`;
+      const apiResponse = await fetch(url, {
         headers: {
           Accept: "application/json",
           Authorization: request.query["token"]
         }
       });
-    const alerts = await apiResponse.json();
-    response.send(alerts);
+      const alerts = await apiResponse.json();
+      response.send(alerts);
+    } catch(err) {
+      console.log("Error processing alerts request: ", err);
+    }
 });
